@@ -28,8 +28,8 @@ class Movie < ActiveRecord::Base
         Movie.find_by(title: title , release_date: release_date)
     end
      
-    def self.find_movies_after_2002(year)
-        Movie.where("release_date > ?", year)
+    def self.find_movies_after_2002
+        Movie.where("release_date > ?", 2002)
     end
 
     # update individual instance
